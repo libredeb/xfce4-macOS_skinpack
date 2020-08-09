@@ -22,6 +22,21 @@ else
     exit
 fi
 
-echo "The necessary resources will be installed."
-echo "Please enter your sudo password!"
-sudo resources/install_resources.sh
+install_resources() {
+    echo "The necessary resources will be installed."
+    echo "Please enter your sudo password!"
+    sudo resources/install_resources.sh
+}
+
+# Subcommands and help 
+case "$1" in
+    1|install)
+        install_resources
+        ;;
+    *)
+        echo -e "\n\tUsage: skinpack [command]"
+        echo -e "\n\tAvailable commands (You can use name or command number):"
+        echo -e "\t\t1 | install   # Install skinpack completely and configure it"
+        exit 1
+        ;;
+esac
