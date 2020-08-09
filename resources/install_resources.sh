@@ -16,14 +16,14 @@ install_debian_packages() {
 
 install_gtk_themes() {
     echo -e "Installing Gtk+ themes..."
-    mv Gtk/California/ /usr/share/themes/
+    mv resources/Gtk/California/ /usr/share/themes/
     chown root:root -R /usr/share/themes/California/
 }
 
 install_icon_themes() {
     echo -e "Installing cursor and icon themes..."
-    mv icons/Cocoa/ /usr/share/icons/
-    mv icons/Rainbow/ /usr/share/icons/
+    mv resources/icons/Cocoa/ /usr/share/icons/
+    mv resources/icons/Rainbow/ /usr/share/icons/
     chown root:root -R /usr/share/icons/Cocoa/
     chown root:root -R /usr/share/icons/Rainbow/
     gtk-update-icon-cache -f /usr/share/icons/Cocoa/
@@ -31,7 +31,7 @@ install_icon_themes() {
 
 install_fonts() {
     echo -e "Installing fonts..."
-    mv fonts/SF/ /usr/share/fonts/
+    mv resources/fonts/SF/ /usr/share/fonts/
     chown root:root -R /usr/share/fonts/SF/
     fc-cache -f
 }
