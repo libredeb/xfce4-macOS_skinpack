@@ -21,3 +21,7 @@ else
     echo "Please check USER and HOME environment vars"
     exit
 fi
+
+echo "The necessary resources will be installed."
+echo "Please enter your sudo password!"
+sudo resources/install_resources.sh
