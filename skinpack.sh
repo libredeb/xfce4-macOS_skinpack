@@ -34,6 +34,8 @@ remove_and_restore() {
     echo "The installed resources will be removed."
     echo "Please enter your sudo password!"
     sudo resources/remove_resources.sh
+    echo "Removing configurations installed."
+    configurations/remove.sh $USER_HOME
 }
 
 # Subcommands and help 
