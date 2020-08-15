@@ -38,6 +38,7 @@ install_icon_themes() {
     chown root:root -R /usr/share/icons/Cocoa/
     chown root:root -R /usr/share/icons/Rainbow/
     gtk-update-icon-cache -f /usr/share/icons/Cocoa/
+    
 }
 
 install_fonts() {
