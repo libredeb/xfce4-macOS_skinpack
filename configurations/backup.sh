@@ -9,7 +9,6 @@ then
     exit
 fi
 
-rm -Rf $1/.config/xfce4/panel
-rm -Rf $1/.config/xfce4/xfconf
-cp -R $1/.skinpack/panel $1/.config/xfce4/
-cp -R $1/.skinpack/xfconf $1/.config/xfce4/
+mkdir $1/.skinpack
+cp -R $1/.config/xfce4/panel $1/.skinpack/
+cp -R $1/.config/xfce4/xfconf $1/.skinpack/

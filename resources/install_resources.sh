@@ -9,6 +9,8 @@ then
     exit
 fi
 
+CURRENT_DIR=$PWD
+
 install_debian_packages() {
     echo -e "Installing required packages..."
     apt-get update
@@ -23,6 +25,7 @@ install_and_compile_lightpad() {
     ninja
     sudo ninja install
     rm -Rf /tmp/lightpad
+    cd $CURRENT_DIR
 }
 
 install_gtk_themes() {
@@ -38,7 +41,8 @@ install_icon_themes() {
     chown root:root -R /usr/share/icons/Cocoa/
     chown root:root -R /usr/share/icons/Rainbow/
     gtk-update-icon-cache -f /usr/share/icons/Cocoa/
-    
+    cp resources/icons/apple-menu.svg /usr/share/pixmaps/
+    cp resources/icons/catfish-symbolic.png /usr/share/pixmaps/
 }
 
 install_fonts() {

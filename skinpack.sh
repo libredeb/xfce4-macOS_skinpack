@@ -10,11 +10,13 @@ then
 fi
 
 # Script Settings (Global vars)
-if [ $HOME ]
+if [ $HOME ] && [ $USER ]
 then
+    EXEC_USER=$USER
     USER_HOME=$HOME
 elif [ $USER ]
 then
+    EXEC_USER=$USER
     USER_HOME=$( getent passwd "$USER" | cut -d: -f6 )
 else
     echo "The user home directory was not found!"
@@ -23,11 +25,13 @@ else
 fi
 
 install_and_configure() {
+    echo "Backing up the current configuration..."
+    configurations/backup.sh $USER_HOME
     echo "The necessary resources will be installed."
     echo "Please enter your sudo password!"
     sudo resources/install_resources.sh
     echo "Applying some configurations..."
-    configurations/apply.sh
+    configurations/apply.sh $USER_HOME $EXEC_USER
 }
 
 remove_and_restore() {
