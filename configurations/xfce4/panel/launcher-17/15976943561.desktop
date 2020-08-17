@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Catfish File Search
+Comment=Search the file system
+Exec=/usr/bin/catfish %f
+Icon=/usr/share/pixmaps/catfish-symbolic.png
+Path=
+Terminal=false
+StartupNotify=false

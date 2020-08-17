@@ -14,7 +14,7 @@ CURRENT_DIR=$PWD
 install_debian_packages() {
     echo -e "Installing required packages..."
     apt-get update
-    apt-get install gtk2-engines-murrine gtk2-engines-pixbuf gnome-icon-theme plank catfish appmenu-gtk2-module appmenu-gtk3-module appmenu-qt xfce4-appmenu-plugin xfce4-notifyd meson ninja-build libgee-0.8-dev libgnome-menu-3-dev cdbs valac git libvala-0.42-dev libglib2.0-dev libwnck-3-dev libgtk-3-dev xterm python3 python3-wheel python3-setuptools gnome-menus
+    apt-get install gtk2-engines-murrine gtk2-engines-pixbuf gnome-icon-theme plank catfish appmenu-gtk2-module appmenu-gtk3-module appmenu-qt xfce4-appmenu-plugin xfce4-statusnotifier-plugin xfce4-notifyd meson ninja-build libgee-0.8-dev libgnome-menu-3-dev cdbs valac git libvala-0.42-dev libglib2.0-dev libwnck-3-dev libgtk-3-dev xterm python3 python3-wheel python3-setuptools gnome-menus epiphany-browser gnome-maps shotwell gnome-calendar gedit rhythmbox rhythmbox-plugin-alternative-toolbar gnome-software gnome-software-plugin-snap
 }
 
 install_and_compile_lightpad() {
@@ -52,8 +52,22 @@ install_fonts() {
     fc-cache -f
 }
 
+install_wallpaper() {
+    cp resources/backgrounds/Catalina.jpg /usr/share/backgrounds/
+    chmod 644 /usr/share/backgrounds/Catalina.jpg
+    chown root:root /usr/share/backgrounds/Catalina.jpg
+}
+
+install_plank_theme() {
+    mv resources/plank/California/ /usr/share/plank/themes/
+    chmod 755 /usr/share/plank/themes/California
+    chmod 644 /usr/share/plank/themes/California/*.theme
+    chown root:root -R /usr/share/plank/themes/California
+}
+
 install_debian_packages
 install_and_compile_lightpad
 install_gtk_themes
 install_icon_themes
 install_fonts
+install_wallpaper
