@@ -4,7 +4,7 @@
 
 ## Screenshot
 
-![Alt Text](url)
+![Screenshot](https://raw.githubusercontent.com/libredeb/xfce4-macOS_skinpack/master/images/screenshot.png)
 
 > BASH Script is used to apply the theme
 
