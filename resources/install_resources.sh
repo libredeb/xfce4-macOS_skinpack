@@ -71,3 +71,4 @@ install_gtk_themes
 install_icon_themes
 install_fonts
 install_wallpaper
+install_plank_theme
