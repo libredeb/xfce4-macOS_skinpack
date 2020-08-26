@@ -2,6 +2,10 @@
 
 **A custom skinpack for Debian and Ubuntu based distros using XFCE4**
 
+## Screenshot
+
+![Alt Text](url)
+
 > BASH Script is used to apply the theme
 
 ## Usage
