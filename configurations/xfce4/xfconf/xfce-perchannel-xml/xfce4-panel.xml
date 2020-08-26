@@ -4,7 +4,7 @@
   <property name="configver" type="int" value="2"/>
   <property name="panels" type="array">
     <value type="int" value="2"/>
-    <property name="panel-1" type="empty">
+    <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=6;x=68;y=25"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="size" type="uint" value="24"/>

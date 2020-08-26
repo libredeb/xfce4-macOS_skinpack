@@ -22,9 +22,6 @@ rm -Rf $1/.config/plank/dock1/*
 mkdir -p $1/.config/plank/dock1/
 
 # Apply new settings
-xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
-xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
-xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 echo "#xfce4-power-manager-plugin * { -gtk-icon-transform: scale(1.2); }" >> $1/.config/gtk-3.0/gtk.css
 
 cp -R resources/plank/dock1/launchers $1/.config/plank/dock1/
@@ -39,6 +36,10 @@ find $1/.config/xfce4/xfconf -type d -exec chmod 755 {} \;
 find $1/.config/xfce4/xfconf -type f -exec chmod 644 {} \;
 chown -R $2:$2 $1/.config/xfce4/panel
 chown -R $2:$2 $1/.config/xfce4/xfconf
+
+xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
+xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
+xfconf-query -c xsettings -p /Gtk/Modules -n -t string -s "appmenu-gtk-module"
 
 xfconf-query -c xfwm4 -p /general/theme -s California
 xfconf-query -c xsettings -p /Net/ThemeName -s California
