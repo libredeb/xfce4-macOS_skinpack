@@ -47,6 +47,9 @@
       <property name="show-button-title" type="bool" value="false"/>
       <property name="button-icon" type="string" value="/usr/share/pixmaps/apple-menu.svg"/>
       <property name="button-title" type="string" value=""/>
+      <property name="custom-menu" type="bool" value="true"/>
+      <property name="custom-menu-file" type="string" value="/etc/xdg/menus/comice.menu"/>
+      <property name="show-menu-icons" type="bool" value="false"/>
     </property>
     <property name="plugin-2" type="string" value="separator">
       <property name="style" type="uint" value="0"/>

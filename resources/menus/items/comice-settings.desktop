@@ -1,10 +1,11 @@
 [Desktop Entry]
-Name=System Preferences...
-Comment=Settings Manager for your computer
+Version=1.0
+Type=Application
 Exec=xfce4-settings-manager
 Icon=preferences-desktop
+StartupNotify=false
 Terminal=false
-Type=Application
-Categories=X-XFCE;Settings;DesktopSettings;
+Categories=Utility;X-XFCE;X-Xfce-Toplevel;
 OnlyShowIn=XFCE;
-X-XfceSettingsManagerHidden=true
+Name=System Preferences...
+Comment=Settings Manager for your computer
