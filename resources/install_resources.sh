@@ -65,6 +65,39 @@ install_plank_theme() {
     chown root:root -R /usr/share/plank/themes/California
 }
 
+install_menus() {
+    # Menu binary
+    mv resources/menus/bin/comice-session /usr/bin/
+    chmod 755 /usr/bin/comice-session
+    chown root:root /usr/bin/comice-session
+    # Menu Items
+    mv resources/menus/items/comice-logout.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-logout.desktop
+    chown root:root /usr/share/applications/comice-logout.desktop
+    mv resources/menus/items/comice-shutdown.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-shutdown.desktop
+    chown root:root /usr/share/applications/comice-shutdown.desktop
+    mv resources/menus/items/comice-restart.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-restart.desktop
+    chown root:root /usr/share/applications/comice-restart.desktop
+    mv resources/menus/items/comice-sleep.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-sleep.desktop
+    chown root:root /usr/share/applications/comice-sleep.desktop
+    mv resources/menus/items/comice-appstore.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-appstore.desktop
+    chown root:root /usr/share/applications/comice-appstore.desktop
+    mv resources/menus/items/comice-settings.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-settings.desktop
+    chown root:root /usr/share/applications/comice-settings.desktop
+    mv resources/menus/items/comice-about.desktop /usr/share/applications/
+    chmod 644 /usr/share/applications/comice-about.desktop
+    chown root:root /usr/share/applications/comice-about.desktop
+    # Menu XDG for XFCE4
+    mv resources/menus/xdg/comice.menu /etc/xdg/menus/
+    chmod 644 /etc/xdg/menus/comice.menu
+    chown root:root /etc/xdg/menus/comice.menu
+}
+
 install_debian_packages
 install_and_compile_lightpad
 install_gtk_themes
@@ -72,3 +105,4 @@ install_icon_themes
 install_fonts
 install_wallpaper
 install_plank_theme
+install_menus

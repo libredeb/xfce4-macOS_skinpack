@@ -14,7 +14,7 @@ case "$1" in
         zenity --question --width 300 --height 100 --ok-label="Sleep" --cancel-label="Cancel" --icon-name="system-hibernate" --title="" --text "<b>Are you sure you want to suspend your computer now?</b> \n\n<sub>If you suspend the computer now, your work will not be lost and you will be able to resume where you left off.</sub>"; if [ $? -eq 0 ]; then xfce4-session-logout --suspend; fi
         ;;
     4|logout)
-        zenity --question --width 300 --height 100 --ok-label="Log Out" --cancel-label="Cancel" --icon-name="system-log-out" --title="" --text "<b>Are you sure you want to quit all applications and log out now?</b> \n\n<sub>If you quit all applications and log out, you will not be able to recover your work. Save it!</sub>"; if [ $? -eq 0 ]; then xfce4-session-logout --halt; fi
+        zenity --question --width 300 --height 100 --ok-label="Log Out" --cancel-label="Cancel" --icon-name="system-log-out" --title="" --text "<b>Are you sure you want to quit all applications and log out now?</b> \n\n<sub>If you quit all applications and log out, you will not be able to recover your work. Save it!</sub>"; if [ $? -eq 0 ]; then xfce4-session-logout --logout; fi
         ;;
     *)
         echo -e "Unknown command or option!"
