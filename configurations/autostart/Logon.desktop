@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Version=0.9.4
+Type=Application
+Name=Logon sound
+Comment=Sound of logon
+Exec=mpg123 /home/comice/.config/comice/logon.mp3 &
+OnlyShowIn=XFCE;
+StartupNotify=false
+Terminal=false
+Hidden=false
+

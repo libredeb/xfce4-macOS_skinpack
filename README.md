@@ -21,3 +21,8 @@ $ ./skinpack.sh remove
 ```
 
 > **Notice:** run this script with your user (without sudo or root) and follow the instructions.
+
+## Notes
+
+* **For LightDM Webkit:** download DEB file of version 2
+* **For Plymouth:** download next packages from backports: `firmware-linux-nonfree firmware-misc-nonfree firmware-amd-graphics`
